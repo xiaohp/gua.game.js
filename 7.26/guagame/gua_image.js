@@ -18,11 +18,3 @@ class GuaImage {
 
     }
 }
-
-// 不应该继承 guaimage
-// class Player extends GuaImage {
-//     constructor(game, name) {
-//         super(game, name)
-//
-//     }
-// }

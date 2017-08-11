@@ -106,7 +106,7 @@ class GuaGame {
                 loads.push(1)
                 log('load images', loads.length, names.length)
                 if (loads.length == names.length) {
-                    log('load images', g.images)
+                    log('load images finish', g.images)
                     g.__start()
                 }
             }

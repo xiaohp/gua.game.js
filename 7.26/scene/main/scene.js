@@ -66,7 +66,7 @@ class Player extends GuaImage {
 class Enemy extends GuaImage {
     constructor(game) {
         var type = randomBetween(0, 4)
-        var nem = 'enemy' + type
+        var name = 'enemy' + type
         super(game, name)
         this.setup()
 
@@ -117,7 +117,6 @@ class Scene extends GuaScene {
         this.cloud = Cloud.new(game, 'cloud')
 
         // this.player = GuaImage.new(game, 'player')
-
         this.player = Player.new(game)
         this.player.x = 100
         this.player.y = 150
@@ -125,7 +124,6 @@ class Scene extends GuaScene {
         this.addElement(this.bg)
         this.addElement(this.cloud)
         this.addElement(this.player)
-
         this.addEnemies()
     }
     addEnemies() {
