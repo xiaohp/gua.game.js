@@ -19,7 +19,7 @@ var imageFromPath = function(path) {
     img.src = path
     return img
 }
-
+// 挡板
 var Paddle = function() {
     var image = imageFromPath('paddle.png')
     var o = {
@@ -46,7 +46,7 @@ var Paddle = function() {
     }
     return o
 }
-
+// 球
 var Ball = function() {
     var image = imageFromPath('ball.png')
     var o = {
@@ -77,7 +77,6 @@ var Ball = function() {
     return o
 }
 
-// 瓜
 var GuaGame = function() {
     var g = {
         actions: {},
@@ -120,10 +119,9 @@ var GuaGame = function() {
         // draw
         g.draw()
     }, 1000/30)
-
     return g
 }
-
+// 入口
 var __main = function() {
     var game = GuaGame()
 
