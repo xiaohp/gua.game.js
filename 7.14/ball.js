@@ -1,6 +1,5 @@
 var Ball = function(game) {
     var o = game.imageByName('ball')
-    // var image = imageFromPath('ball.png')
     o.x = 100
     o.y = 200
     o.speedX = 5

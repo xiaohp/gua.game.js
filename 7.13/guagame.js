@@ -19,7 +19,7 @@ var GuaGame = function(fps) {
     window.addEventListener('keyup', function(event){
         g.keydowns[event.key] = false
     })
-    //
+    // 注册按键事件
     g.registerAction = function(key, callback) {
         g.actions[key] = callback
     }

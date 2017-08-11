@@ -97,7 +97,7 @@ var GuaGame = function() {
     window.addEventListener('keyup', function(event){
         g.keydowns[event.key] = false
     })
-    //
+    // 注册按键与操作
     g.registerAction = function(key, callback) {
         g.actions[key] = callback
     }
