@@ -45,10 +45,20 @@ var __main = function() {
         enemy3: 'img/enemy3.png',
         enemy4: 'img/enemy4.png',
         fire: 'img/bullet.png',
+        w1: 'img/walking/w1.png',
+        w2: 'img/walking/w2.png',
+        w3: 'img/walking/w3.png',
+        w4: 'img/walking/w4.png',
+        w5: 'img/walking/w5.png',
+        w6: 'img/walking/w6.png',
+        w7: 'img/walking/w7.png',
+        w8: 'img/walking/w8.png',
+        w9: 'img/walking/w8.png',
+
     }
     var game = GuaGame.instance(30, images, function(g){
-        var s = Scene.new(g)
-        // var s = SceneTitle.new(g)
+        // var s = Scene.new(g)
+        var s = SceneTitle.new(g)
 
         g.runWithScene(s)
     })
