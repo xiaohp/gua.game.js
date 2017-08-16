@@ -45,6 +45,7 @@ var __main = function() {
         enemy3: 'img/enemy3.png',
         enemy4: 'img/enemy4.png',
         fire: 'img/bullet.png',
+        // 走路动画
         w1: 'img/walking/w1.png',
         w2: 'img/walking/w2.png',
         w3: 'img/walking/w3.png',
@@ -54,7 +55,8 @@ var __main = function() {
         w7: 'img/walking/w7.png',
         w8: 'img/walking/w8.png',
         w9: 'img/walking/w8.png',
-
+        // 多状态动画
+        cave: 'img/cave.png',
     }
     var game = GuaGame.instance(30, images, function(g){
         // var s = Scene.new(g)
