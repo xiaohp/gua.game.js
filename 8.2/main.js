@@ -35,34 +35,12 @@ var enableDebugMode = function(game, enable) {
 
 var __main = function() {
     var images = {
-        bullet: 'img/bullet.png',
-        cloud: 'img/cloud0.png',
-        player: 'img/player.png',
-        sky: 'img/sky.jpg',
-        enemy0: 'img/enemy0.png',
-        enemy1: 'img/enemy1.png',
-        enemy2: 'img/enemy2.png',
-        enemy3: 'img/enemy3.png',
-        enemy4: 'img/enemy4.png',
-        fire: 'img/bullet.png',
-        // 走路动画
-        w1: 'img/walking/w1.png',
-        w2: 'img/walking/w2.png',
-        w3: 'img/walking/w3.png',
-        w4: 'img/walking/w4.png',
-        w5: 'img/walking/w5.png',
-        w6: 'img/walking/w6.png',
-        w7: 'img/walking/w7.png',
-        w8: 'img/walking/w8.png',
-        w9: 'img/walking/w8.png',
-        // 多状态动画
-        cave: 'img/cave.png',
         // flappy bird images
-        bg: 'bird/bg.png',
-        ground: 'bird/ground.png',
-        b1: 'bird/b1.png',
-        b2: 'bird/b2.png',
-        b3: 'bird/b3.png',
+        bg: 'img/bg2.png',
+        ground: 'img/ground.png',
+        b1: 'img/b1.png',
+        b2: 'img/b2.png',
+        b3: 'img/b3.png',
     }
     var game = GuaGame.instance(30, images, function(g){
         // var s = Scene.new(g)
