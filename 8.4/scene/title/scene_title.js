@@ -12,7 +12,7 @@ class Pipes {
             var p2 = GuaImage.new(game, 'pipe')
             p2.flipY = true
             p2.x = p1.x
-            
+
             this.resetPipesPositoin(p1, p2)
 
             this.pipes.push(p1)
@@ -26,7 +26,26 @@ class Pipes {
         p1.y = randomBetween(-200, 0)
         p2.y = p1.y + p1.h + this.pipeSpace
     }
+    debug() {
+        // this.管子横向间距 = config.管子横向间距.value
+        // this.pipeSpace = config.pipe_space.vale
+        // FIXME: enable debug
+    }
     update() {
+        // FIXME: debug
+        // for (var i = 0; i < this.pipes.length / 2; i += 2) {
+        //     var p1 = this.pipes[i]
+        //     var p2 = this.pipes[i + 1]
+        //     p1.x -= 5
+        //     p2.x -= 5
+        //     if (p1.x < -100) {
+        //         p1.x += this.管子横向间距 * this.columsOfPipe
+        //     }
+        //     if (p2.x < -100) {
+        //         p2.x += this.管子横向间距 * this.columsOfPipe
+        //         this.resetPipesPositoin(p1, p2)
+        //     }
+        // }
         for (var p of this.pipes) {
             p.x -= 5
             if (p.x < -100) {
@@ -45,7 +64,6 @@ class Pipes {
 
             var scaleX = p.flipX ? -1 : 1
             var scaleY = p.flipY ? -1 : 1
-            log('debug flip', p.flipX, p.flipY, scaleX, scaleY)
             context.scale(scaleX, scaleY)
             context.rotate(p.rotation * Math.PI / 180)
             context.translate(-w2, -h2)
@@ -81,6 +99,7 @@ class SceneTitle extends GuaScene {
         }
         this.skipCount = 4
         // bird
+        this.birdSpeed = 2
         var b = GuaAnimation.new(game)
         b.x = 100
         b.y = 200
@@ -88,6 +107,9 @@ class SceneTitle extends GuaScene {
         this.addElement(b)
 
         this.setupInputs()
+    }
+    debug() {
+        this.birdSpeed = config.bird_speed.value
     }
 
     update() {
@@ -108,10 +130,10 @@ class SceneTitle extends GuaScene {
         var self = this
         var b = this.bird
         self.game.registerAction('a', function(keyStatus) {
-            b.move(-2, keyStatus)
+            b.move(-self.birdSpeed, keyStatus)
         })
         self.game.registerAction('d', function(keyStatus) {
-            b.move(2, keyStatus)
+            b.move(self.birdSpeed, keyStatus)
         })
         self.game.registerAction('j', function(keyStatus) {
             b.jump()
