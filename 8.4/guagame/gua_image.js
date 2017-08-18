@@ -6,7 +6,8 @@ class GuaImage {
         this.y = 0
         this.w = this.texture.width
         this.h = this.texture.height
-        
+
+        this.flipX = false
         this.flipY = false
         this.rotation = 0
     }

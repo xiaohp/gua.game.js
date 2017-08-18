@@ -7,11 +7,12 @@ class Pipes {
         this.columsOfPipe = 3
         for (var i = 0; i < 3; i++) {
             var p1 = GuaImage.new(game, 'pipe')
-            p1.flipY = true
             p1.x = 500 + i * this.管子横向间距
 
             var p2 = GuaImage.new(game, 'pipe')
+            p2.flipY = true
             p2.x = p1.x
+            
             this.resetPipesPositoin(p1, p2)
 
             this.pipes.push(p1)
@@ -41,8 +42,10 @@ class Pipes {
             var w2 = p.w / 2
             var h2 = p.h / 2
             context.translate(p.x + w2, p.y + h2)
-            var scaleX = this.flipX ? -1 : 1
-            var scaleY = this.flipY ? -1 : 1
+
+            var scaleX = p.flipX ? -1 : 1
+            var scaleY = p.flipY ? -1 : 1
+            log('debug flip', p.flipX, p.flipY, scaleX, scaleY)
             context.scale(scaleX, scaleY)
             context.rotate(p.rotation * Math.PI / 180)
             context.translate(-w2, -h2)
