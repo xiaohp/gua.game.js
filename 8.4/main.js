@@ -37,6 +37,7 @@ var __main = function() {
     var images = {
         // flappy bird images
         bg: 'img/bg.png',
+        pipe: 'img/pipe.png',
         ground: 'img/ground.png',
         b1: 'img/b1.png',
         b2: 'img/b2.png',
