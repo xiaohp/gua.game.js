@@ -9,7 +9,7 @@ var loadLevel = function(game, n) {
     }
     return blocks
 }
-
+var blocks = []
 var enableDebugMode = function(game, enable) {
     if(!enable) {
         return

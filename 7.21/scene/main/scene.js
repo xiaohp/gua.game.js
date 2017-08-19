@@ -8,7 +8,7 @@ var Scene = function(game) {
 
     var score = 0
 
-    var blocks = loadLevel(game, 1)
+    blocks = loadLevel(game, 1)
 
     game.registerAction('a', function(){
         paddle.moveLeft()
